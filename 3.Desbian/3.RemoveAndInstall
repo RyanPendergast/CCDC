@@ -1,0 +1,21 @@
+apt-get remove xinetd nis yp-tools tftpd atftpd tftp d-hpa telnetd rsh-server rsh-redone-server 
+
+apt-get install tcpdump
+
+apt-get install nmap
+
+apt-get install ufw
+ufw default deny incoming
+ufw allow http
+ufw allow https
+ufw allow dns
+ufw allow ntp
+sudo ufw allow 123/udp
+sudo ufw allow out 123/udp
+sudo ufw allow out 53
+systemctl enable rsyslog
+systemctl start rsyslog
+ufw logging on 
+ufw logging medium
+ufw enable
+apt-get update
