@@ -1,0 +1,10 @@
+DHCP (Dynamic Host Configuration Protocol) MAC filtering is a feature that allows network administrators to restrict network access 
+based on the Media Access Control (MAC) address of a device.
+> Control Panel
+> Network and Sharing Center
+> Change Advanced Sharing Settings
+> Click on the "Change advanced sharing settings" link in the left sidebar.
+> In the Advanced sharing settings window, scroll down to the "Network discovery" section.
+> Click on the "Turn on network discovery" radio button.
+> Click on the "Save changes" button to save your changes
+
