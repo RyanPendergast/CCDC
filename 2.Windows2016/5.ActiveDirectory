@@ -1,0 +1,36 @@
+Open the "Server Manager" and click on "Add roles and features" from the dashboard.
+
+In the "Add Roles and Features Wizard," click "Next" until you get to the "Select installation type" screen.
+
+Select "Role-based or feature-based installation" and click "Next."
+
+Select the target server and click "Next."
+
+Select "Active Directory Domain Services" from the list of server roles and click "Next."
+
+Click "Add Features" in the pop-up dialog and then click "Next."
+
+Click "Next" until you get to the "Select features" screen, and then click "Next" again.
+
+Review the information on the "Active Directory Domain Services" screen and click "Next."
+
+Review the information on the "Confirm installation selections" screen and click "Install" to start the installation.
+
+Wait for the installation to complete, and then click "Close" to exit the wizard.
+
+Open the "Server Manager" and click on "Promote this server to a domain controller" from the dashboard.
+
+In the "Active Directory Domain Services Configuration Wizard," select "Add a new forest" and enter the root domain name for your Active Directory domain.
+
+Set the functional level for the forest and domain to the desired level, and then set the Directory Services Restore Mode (DSRM) password.
+
+Review the DNS options, and then click "Next."
+
+Review the NetBIOS name, and then click "Next."
+
+Review the paths for the Active Directory database, log files, and SYSVOL folder, and then click "Next."
+
+Review the summary screen, and then click "Next" to start the installation.
+
+Wait for the installation to complete, and then click "Finish" to exit the wizard.
+
