@@ -19,3 +19,25 @@ ufw logging on
 ufw logging medium
 ufw enable
 apt-get update
+
+sudo apt-get install apache2 mysql-server php php-mysql rrdtool snmp snmpd
+
+sudo systemctl enable apache2
+sudo systemctl enable mysql
+
+sudo systemctl start apache2
+sudo systemctl start mysql
+
+mysql -u root -p
+CREATE DATABASE cacti;
+GRANT ALL ON cacti.* TO 'cacti'@'localhost' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+EXIT;
+
+wget https://www.cacti.net/downloads/cacti-latest.tar.gz
+tar -xzvf cacti-latest.tar.gz
+
+sudo mv cacti-1.* /var/www/html/cacti
+
+sudo chown -R www-data:www-data /var/www/html/cacti
+sudo chmod -R 775 /var/www/html/cacti
