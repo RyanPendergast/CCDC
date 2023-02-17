@@ -1,0 +1,27 @@
+Configure DNS 
+Open the Server Manager by clicking on the Server Manager icon on the taskbar or by searching for "Server Manager" in the Start menu.
+
+Click on the "Manage" menu in the top right corner of the Server Manager and select "Add Roles and Features."
+
+Click on "Next" in the Add Roles and Features Wizard window until you reach the "Server Roles" page.
+
+Select the "DNS Server" role from the list of roles and click on "Next."
+
+Click on "Next" in the "Features" page, then click on "Install."
+
+After the DNS server role is installed, click on the "Complete DNS Configuration" link in the Server Manager, or open the DNS Manager by 
+searching for "DNS Manager" in the Start menu.
+
+In the DNS Manager, expand the server name, then right-click on the "Forward Lookup Zones" folder and select "New Zone."
+
+Follow the steps in the New Zone Wizard to create a forward lookup zone, specifying the name and type of the zone, and the type of
+dynamic updates you want to allow.
+
+After creating the forward lookup zone, repeat the same process to create a reverse lookup zone by right-clicking on the "Reverse
+Lookup Zones" folder and selecting "New Zone."
+
+In the DNS Manager, expand the forward lookup zone and select the "New Host (A or AAAA)" option to create an A record, or the "New Alias
+(CNAME)" option to create a CNAME record.
+
+Follow the steps in the New Resource Record Wizard to create the A or CNAME record, specifying the name, IP address (for A record), or 
+fully qualified domain name (for CNAME record) of the resource you want to create
