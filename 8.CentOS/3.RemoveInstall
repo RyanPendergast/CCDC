@@ -1,0 +1,8 @@
+yum remove xinetd nis yp-tools tftpd atftpd tftp d-hpa telnetd rsh-server rsh-redone-server 
+yum -y install tcpdump
+yum -y install nmap
+yum -y install rkhunter
+yum -y install NetworkManager-tui
+yum -y install firewalld
+systemctl start firewalld
+systemctl enable firewalld
