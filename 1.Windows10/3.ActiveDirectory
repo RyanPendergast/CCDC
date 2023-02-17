@@ -1,0 +1,27 @@
+Open the Server Manager by clicking on the "Start" menu and searching for "Server Manager."
+
+In the Server Manager window, click on "Add Roles and Features."
+
+Click "Next" until you get to the "Select server roles" screen.
+
+Scroll down and select "Active Directory Domain Services" and click "Next."
+
+Click "Next" until you get to the "Confirm installation selections" screen, then click "Install" to start the installation.
+
+After the installation is complete, you will be prompted to promote the server to a domain controller. Click "Close" to exit the wizard.
+
+Open the "Control Panel" and click on "Programs and Features."
+
+Click on "Turn Windows features on or off."
+
+Scroll down and select "Remote Server Administration Tools."
+
+Expand "Role Administration Tools" and select "AD DS and AD LDS Tools."
+
+Expand "Feature Administration Tools" and select "AD DS Snap-ins and Command-line Tools."
+
+Click "OK" to install the Administrative Center feature.
+
+Open the Administrative Center by searching for "Active Directory Administrative Center" in the Start menu.
+
+Enter the credentials for an account with domain administrator privileges to log in and manage the Active Directory domain.
