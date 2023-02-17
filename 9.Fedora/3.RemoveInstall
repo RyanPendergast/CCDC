@@ -6,5 +6,12 @@ yum -y install rkhunter
 yum -y install tmux
 yum -y install NetworkManager-tui
 yum -y install firewalld
+sudo dnf update
+sudo dnf install clamav clamav-update
+sudo freshclam
+sudo dnf install iptables-services
+sudo systemctl start iptables
+sudo systemctl enable iptables
+
 systemctl start firewalld
 systemctl enable firewalld
