@@ -1,5 +1,18 @@
-sudo apt-get install tftpd-hpa
+nanosudo ./install-tftp.sh
 
-sudo mkdir /var/tftp
-sudo chown tftp:tftp /var/tftp
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install tftpd-hpa -y
+sudo mkdir /tftpboot
+sudo chmod -R 777 /tftpboot
+sudo chown -R nobody:nogroup /tftpboot
+sudo sed -i 's|/srv/tftp|/tftpboot|g' /etc/default/tftpd-hpa
+sudo service tftpd-hpa restart
 
+
+
+---------------------------------
+
+
+chmod +x install-tftp.sh
+sudo ./install-tftp.sh
