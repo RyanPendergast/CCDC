@@ -1,5 +1,9 @@
 #!/bin/bash
 
+Sudo apt install net-tools
+Sudo apt install apache2
+sudo apt install iptables
+
 #This scipt sets up Linux Firewall
 
 echo " Saving Iptables Backup.."
