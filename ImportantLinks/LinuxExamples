@@ -1,2 +1,5 @@
 mkdir - create a directory
 
+whoami - current user
+
+which <file> - where a file might be 
