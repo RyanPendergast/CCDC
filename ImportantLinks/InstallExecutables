@@ -1,0 +1,20 @@
+Linux Systems
+
+//how to create a directory
+mkdir scripts
+cd scripts
+nano script.sh
+CTRL + O - SAVE
+CTRL + X - EXIT
+
+//puts it to an executable
+chmod +x script.sh
+./script.sh
+
+Windows
+Open up Powershell
+
+Install-Module PS2EXE
+Invoke-PS2EXE -File .\scipts.ps1 -OutputFile .\scripts.exe
+Set-ExecutionPolicy RemoteSigned
+./myscript.ps1 -ExecutionPolicy Bypass
