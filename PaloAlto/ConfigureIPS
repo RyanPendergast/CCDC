@@ -1,0 +1,15 @@
+configure
+
+set rulebase security rules <rule-name> profile-setting profiles <profile-name>
+
+set profiles intrusion intrusion-profile <profile-name>
+
+set profiles intrusion intrusion-profile <profile-name> packet-capture no
+set profiles intrusion intrusion-profile <profile-name> packet-display no
+set profiles intrusion intrusion-profile <profile-name> block-ip-packet no
+set profiles intrusion intrusion-profile <profile-name> block-udp-flood yes
+set profiles intrusion intrusion-profile <profile-name> block-tcp-syn-flood yes
+
+exit
+
+commit
