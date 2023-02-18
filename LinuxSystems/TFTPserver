@@ -1,0 +1,5 @@
+sudo apt-get install tftpd-hpa
+
+sudo mkdir /var/tftp
+sudo chown tftp:tftp /var/tftp
+
