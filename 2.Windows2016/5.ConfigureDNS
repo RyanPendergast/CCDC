@@ -1,27 +1,67 @@
-Configure DNS 
-Open the Server Manager by clicking on the Server Manager icon on the taskbar or by searching for "Server Manager" in the Start menu.
+Windows 10
+Open the Network & Internet settings:
+You can open the Network & Internet settings by clicking on the network icon in the system tray 
+and selecting "Network & Internet settings".
 
-Click on the "Manage" menu in the top right corner of the Server Manager and select "Add Roles and Features."
+Open the network adapter settings:
+In the Network & Internet settings, click on "Change adapter options". This will open a
+window that displays your network adapters.
 
-Click on "Next" in the Add Roles and Features Wizard window until you reach the "Server Roles" page.
+Open the properties for your network adapter:
+Right-click on the network adapter that you want to configure and select "Properties".
 
-Select the "DNS Server" role from the list of roles and click on "Next."
+Select the Internet Protocol Version 4 (TCP/IPv4) option:
+In the Properties window, select the "Internet Protocol Version 4 (TCP/IPv4)" option and
+click on "Properties".
 
-Click on "Next" in the "Features" page, then click on "Install."
+Specify the DNS server addresses:
+In the Properties window, select the "Use the following DNS server addresses" option. Enter
+the IP addresses of the DNS servers that you want to use in the "Preferred DNS server" and 
+"Alternate DNS server" fields. You can obtain these addresses from your network administrator
+or Internet service provider.
 
-After the DNS server role is installed, click on the "Complete DNS Configuration" link in the Server Manager, or open the DNS Manager by 
-searching for "DNS Manager" in the Start menu.
+Windows 2016
+Open the Server Manager:
+You can open the Server Manager by clicking on the Server Manager icon in the taskbar 
+or by searching for it in the Start menu.
 
-In the DNS Manager, expand the server name, then right-click on the "Forward Lookup Zones" folder and select "New Zone."
+Select the DNS server role:
+In the Server Manager, select the "DNS" option from the left-hand menu. This will display
+the DNS server role dashboard.
 
-Follow the steps in the New Zone Wizard to create a forward lookup zone, specifying the name and type of the zone, and the type of
-dynamic updates you want to allow.
+Configure the DNS server settings:
+In the DNS server role dashboard, click on the "DNS" option to display the DNS settings. 
+Here, you can configure options such as forwarders, root hints, and recursion.
 
-After creating the forward lookup zone, repeat the same process to create a reverse lookup zone by right-clicking on the "Reverse
-Lookup Zones" folder and selecting "New Zone."
+Configure the DNS server properties:
+To configure the DNS server properties, right-click on the server name in the left-hand menu 
+and select "Properties". In the Server Properties window, you can configure options such as 
+the server name, IP addresses, and advanced settings.
 
-In the DNS Manager, expand the forward lookup zone and select the "New Host (A or AAAA)" option to create an A record, or the "New Alias
-(CNAME)" option to create a CNAME record.
+Configure the DNS server zones:
+To configure the DNS server zones, expand the server name in the left-hand menu and select 
+the "Forward Lookup Zones" or "Reverse Lookup Zones" option. Here, you can configure options 
+such as the zone name, type, and records.
 
-Follow the steps in the New Resource Record Wizard to create the A or CNAME record, specifying the name, IP address (for A record), or 
-fully qualified domain name (for CNAME record) of the resource you want to create
+Windows 2012
+Open the Server Manager:
+You can open the Server Manager by clicking on the Server Manager icon in the taskbar or by 
+searching for it in the Start menu.
+
+Select the DNS server role:
+In the Server Manager, select the "DNS" option from the left-hand menu. This will display 
+the DNS server role dashboard.
+
+Configure the DNS server settings:
+In the DNS server role dashboard, click on the "DNS" option to display the DNS settings. 
+Here, you can configure options such as forwarders, root hints, and recursion.
+
+Configure the DNS server properties:
+To configure the DNS server properties, right-click on the server name in the left-hand 
+menu and select "Properties". In the Server Properties window, you can configure options 
+such as the server name, IP addresses, and advanced settings.
+
+Configure the DNS server zones:
+To configure the DNS server zones, expand the server name in the left-hand menu and 
+select the "Forward Lookup Zones" or "Reverse Lookup Zones" option. Here, you can configure 
+options such as the zone name, type, and records.
