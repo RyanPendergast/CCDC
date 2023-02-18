@@ -1,0 +1,9 @@
+> Control Panel
+> Programs
+> Turn Windows Feautures on Or off
+
+Disable Cortona
+Disable Netlogon Remote Protocol (MS-NRPC) service 
+Disable Remote Desktop Protocol (RDP) service
+Disable Server Message Block (SMB)
+Disable Printers
