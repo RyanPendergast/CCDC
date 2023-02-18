@@ -1,1 +1,45 @@
-x
+NJECT MEMO 
+
+ 
+
+TO: 		IT Management 
+
+FROM: 		Team 7 
+
+CC: 		Annmol Babu, Bharath Mukka, Faith Clarke, Josh Dobyns, Venkat Pathapati, Ellie Schweiger 
+
+RE:		IPv6 
+
+ 
+
+DATE:		February 19, 2022 
+
+ 
+
+Goal – IPv6 
+
+ 
+
+Our Approach/Our Response 
+
+Network Segment             IPv4 Subnet                 IPv6 Prefix 
+
+Public                               172.20.241.0/24		0:0:0:0:0:ffff:ac14:f100 
+
+User			172.20.242.0/24	0:0:0:0:0:ffff:ac14:f200 
+
+Internal			172.20.240.0/24	0:0:0:0:0:ffff:ac14:f000 
+
+ 
+
+Would we also need an internal private address, such as and RFC1918 in IPv4? 
+
+Yes, we would also need a private Ipv6 for special requirements and private use in our ipv6 networks. To connect with our firewalls and other machines on Ipv6, we should have private IP not accessible to public.  
+
+If the use of NAT is anticipated. - What do we need to do for publicly facing external addresses?  
+
+The Ipv6 external public IP needs to be unique and assigned to a unique device such as a webs server or server directly accessible from internet. 
+
+How would we support devices (servers, PCs etc…) on both network at the Same time? 
+
+To support both devices, we need to make sure we have enabled ipv6 on all our network interfaces and Palo Alto firewall. We need to adjust rules so we can see the traffic on Ipv6.  
