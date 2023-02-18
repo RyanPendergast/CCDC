@@ -1,0 +1,44 @@
+Cacti is a free and open source network monitoring and graphing tool. It allows users 
+to graph network data from various sources, including routers, switches, servers, and other 
+devices, and present the data in a graphical format.
+
+Cacti uses the Simple Network Management Protocol (SNMP) to collect data from devices on
+the network, and stores the data in a MySQL database. Users can then create graphs and reports
+based on the collected data, allowing them to monitor network performance, identify trends,
+and troubleshoot issues.
+
+#!/bin/bash
+
+# Install required packages
+sudo apt-get update
+sudo apt-get install apache2 php php-mysql libapache2-mod-php mysql-server mysql-client php-snmp snmp graphviz -y
+
+# Download and install Cacti
+wget https://www.cacti.net/downloads/cacti-latest.tar.gz
+tar xzf cacti-latest.tar.gz
+sudo mv cacti-*/ /var/www/html/cacti
+sudo chown -R www-data:www-data /var/www/html/cacti/
+sudo chmod -R 755 /var/www/html/cacti/
+
+# Set up the MySQL database for Cacti
+sudo mysql -u root -e "CREATE DATABASE cacti;"
+sudo mysql -u root -e "GRANT ALL PRIVILEGES ON cacti.* TO cacti@localhost IDENTIFIED BY 'cactipassword';"
+sudo mysql -u root cacti < /var/www/html/cacti/cacti.sql
+
+# Configure Apache for Cacti
+sudo sed -i 's|DirectoryIndex index.html|DirectoryIndex index.php|' /etc/apache2/mods-enabled/dir.conf
+sudo cp /var/www/html/cacti/include/config.php.dist /var/www/html/cacti/include/config.php
+sudo sed -i 's|$database_type = "mysql";|$database_type = "mysql";\n$database_default = "cacti";\n$database_hostname = "localhost";\n$database_username = "cacti";\n$database_password = "cactipassword";\n$database_port = "3306";\n|' /var/www/html/cacti/include/config.php
+sudo sed -i 's|// $url_path = "/cacti/";|$url_path = "/cacti/";|' /var/www/html/cacti/include/config.php
+sudo a2enmod rewrite
+sudo service apache2 restart
+
+# Configure SNMP for Cacti
+sudo sed -i 's|agentAddress  udp:127.0.0.1:161|agentAddress udp:161,udp6:[::1]:161|' /etc/snmp/snmpd.conf
+sudo service snmpd restart
+
+echo "Cacti has been successfully installed."
+echo "Access Cacti in your web browser at http://localhost/cacti/"
+
+chmod +x cacti-setup.sh
+sudo ./cacti-setup.sh
