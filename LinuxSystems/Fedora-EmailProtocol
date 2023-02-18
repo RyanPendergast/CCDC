@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Install Dovecot
+dnf install dovecot -y
+
+# Edit the configuration file
+cp /etc/dovecot/dovecot.conf /etc/dovecot/dovecot.conf.bak
+sed -i 's/#disable_plaintext_auth = yes/disable_plaintext_auth = no/' /etc/dovecot/dovecot.conf
+sed -i 's/#mail_location =/mail_location = mbox:~/mail:INBOX=\/var\/mail\/%u/' /etc/dovecot/conf.d/10-mail.conf
+
+# Restart the Dovecot service
+systemctl restart dovecot.service
