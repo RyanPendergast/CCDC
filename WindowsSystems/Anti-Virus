@@ -1,0 +1,20 @@
+Download the latest version of ClamAV for Windows from the official website (https://www.clamav.net/downloads#otherversions).
+
+Once the download is complete, extract the contents of the file to a folder on your computer.
+
+Open a Command Prompt window with administrator privileges. To do this, right-click the Start button and select "Command Prompt (Admin)".
+
+Navigate to the folder where you extracted the ClamAV files using the "cd" command. For example, if you extracted the files to the
+"C:\ClamAV" folder, type "cd C:\ClamAV" in the Command Prompt window.
+
+Run the "freshclam" command to update the virus database. Type "freshclam" and press Enter.
+
+Once the virus database is updated, run the "clamscan" command to scan your computer for viruses. Type "clamscan -r C:" and press Enter
+to scan the entire C drive.
+
+To turn on real-time scanning, you can use a third-party program such as Clam Sentinel, which is designed to work with ClamAV on Windows.
+You can download Clam Sentinel from the ClamAV website (https://www.clamav.net/downloads#unofficial).
+
+Once you have installed Clam Sentinel, open the program and select "Real Time Scanning" from the menu.
+
+Click the "Enable" button to turn on real-time scanning
