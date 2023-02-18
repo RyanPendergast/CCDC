@@ -1,0 +1,10 @@
+
+
+set deviceconfig system service disable-telnet yes
+commit
+set deviceconfig system service disable-snmp yes
+commit
+set deviceconfig system service disable-http no
+commit
+block smb
+
