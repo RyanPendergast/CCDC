@@ -1,0 +1,7 @@
+
+
+sudo apt-get update
+sudo apt-get install arp-scan
+
+
+sudo arp-scan --localnet --quiet --plain | awk '{print $1, $2, $3}' | sed 's/\t/ /g' | sort -k 2 | column -t
