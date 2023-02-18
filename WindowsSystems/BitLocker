@@ -1,0 +1,15 @@
+Go to the Start menu, click on the Settings icon (gear-shaped icon), and select "Update & Security".
+
+Select "Device encryption" from the left-hand menu.
+
+If your device meets the hardware requirements for BitLocker, you will see the option to turn on device encryption. If this option is 
+not available, your device may not support BitLocker.
+
+If you want to use BitLocker on a drive other than the system drive, you can enable BitLocker by right-clicking the drive in File Explorer,
+selecting "Turn on BitLocker", and following the on-screen instructions.
+
+If you want to use BitLocker to encrypt the system drive, click on "Manage BitLocker" in the "Device encryption" menu.
+
+Click on "Turn on BitLocker" and follow the on-screen instructions to set up BitLocker, including choosing a password or smart card.
+
+Once you have set up BitLocker, your drive will be encrypted and protected by a password or smart card.
