@@ -1,0 +1,7 @@
+Transport Layer Security (TLS) is a protocol that provides encryption and authentication for network communications. 
+To install and configure TLS on Fedora, you can follow these steps:
+sudo dnf install openssl
+sudo openssl req -x509 -nodes -days 10 -newkey rsa:2048 -keyout /etc/pki/tls/private/example.key -out /etc/pki/tls/certs/example.crt
+SSLEngine on
+SSLCertificateFile /etc/pki/tls/certs/example.crt
+SSLCertificateKeyFile /etc/pki/tls/private/example.key
