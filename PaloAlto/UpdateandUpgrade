@@ -1,0 +1,11 @@
+Connect to the Palo Alto Networks device using SSH or console access.
+
+Enter the command "request system software check" to check if any software updates are available.
+
+If a software update is available, enter the command "request system software download version 8.1.X" to download the software to the
+device. Replace "8.1.X" with the specific version number of the software update you want to download.
+
+After the software is downloaded, enter the command "request system software install version 8.1.X" to install the software update. Again,
+replace "8.1.X" with the specific version number of the software update you want to install.
+
+The device will reboot automatically after the software installation is complete.
