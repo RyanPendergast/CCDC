@@ -1,0 +1,19 @@
+
+operational mode
+
+request packet-capture start
+
+set cli pager off
+set cli config-output-format set
+edit capture
+set filter match source-ip <windows-server-ip> destination-ip <external-ip>
+set mode capture
+set interface <capture-interface>
+set packet-size <capture-packet-size>
+set file <capture-file>
+exit
+
+start
+show capture <capture-file> packet-filter yes
+
+request packet-capture stop
