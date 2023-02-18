@@ -1,0 +1,24 @@
+
+!/bin/bash
+
+# Install RKHunter
+sudo apt-get update
+sudo apt-get install rkhunter -y
+
+# Update RKHunter
+sudo rkhunter --update
+
+# Configure RKHunter
+sudo cp /etc/rkhunter.conf /etc/rkhunter.conf.bak
+sudo sed -i 's|UPDATE_MIRRORS=0|UPDATE_MIRRORS=1|' /etc/rkhunter.conf
+sudo sed -i 's|CRON_DAILY_RUN="false"|CRON_DAILY_RUN="true"|' /etc/default/rkhunter
+
+# Run RKHunter
+sudo rkhunter --check
+
+# Schedule RKHunter
+sudo cp /etc/cron.daily/rkhunter /etc/cron.weekly/rkhunter
+sudo sed -i 's|/etc/cron.daily/|/etc/cron.weekly/|' /etc/cron.weekly/rkhunter
+
+chmod +x rkhunter-setup.sh
+sudo ./rkhunter-setup.sh
