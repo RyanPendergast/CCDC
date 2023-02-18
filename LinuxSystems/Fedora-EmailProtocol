@@ -1,12 +1,23 @@
 #!/bin/bash
 
-# Install Dovecot
-dnf install dovecot -y
+# Install Dovecot and Postfix
+dnf install dovecot postfix -y
 
-# Edit the configuration file
+# Configure Postfix
+cp /etc/postfix/main.cf /etc/postfix/main.cf.bak
+echo 'myhostname = example.com' >> /etc/postfix/main.cf
+echo 'mydestination = example.com, localhost.localdomain, localhost' >> /etc/postfix/main.cf
+echo 'mynetworks = 127.0.0.0/8 [::1]/128' >> /etc/postfix/main.cf
+echo 'inet_interfaces = all' >> /etc/postfix/main.cf
+
+# Configure Dovecot
 cp /etc/dovecot/dovecot.conf /etc/dovecot/dovecot.conf.bak
 sed -i 's/#disable_plaintext_auth = yes/disable_plaintext_auth = no/' /etc/dovecot/dovecot.conf
 sed -i 's/#mail_location =/mail_location = mbox:~/mail:INBOX=\/var\/mail\/%u/' /etc/dovecot/conf.d/10-mail.conf
+sed -i 's/#auth_mechanisms = plain/auth_mechanisms = plain login/' /etc/dovecot/conf.d/10-auth.conf
+echo 'userdb { driver = passwd }' >> /etc/dovecot/conf.d/auth-system.conf.ext
+echo 'passdb { driver = shadow }' >> /etc/dovecot/conf.d/auth-system.conf.ext
 
-# Restart the Dovecot service
+# Restart the Dovecot and Postfix services
+systemctl restart postfix.service
 systemctl restart dovecot.service
