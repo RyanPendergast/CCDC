@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+echo "################################################################"
+echo "## WARNING: Only Authoritzed Users are allowed at this point. ##"
+echo "## All Network traffic is being monitored and logged.         ##"
+echo "## Logs and Other information can be used to investigate      ##"
+echo "## and prosecute unathorized access.                          ##"
+echo "################################################################"
+
+chmod +x warning.sh
+sudo ./warning.sh
+
