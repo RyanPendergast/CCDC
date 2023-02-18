@@ -1,0 +1,18 @@
+https://www.wireshark.org/download.html
+Decode the captured packet in Wireshark and describe what the captured packets represent (ex: TCP connection for SMTP etc...) 
+
+Open the captured packet in Wireshark by selecting "File" > "Open" and choosing the packet capture file.
+
+The first step is to identify the protocol being used. This can be done by looking at the protocol column of the packet
+details pane. The protocol column will tell you the protocol being used for that packet. For example, if the protocol column
+shows "TCP", then the packet is using the TCP protocol.
+
+Once you have identified the protocol being used, you can further analyze the packet to determine the type of traffic. For example,
+if the protocol is TCP, you can determine if the traffic is part of a HTTP, FTP, or SMTP connection by looking at the source and destination
+port numbers. HTTP traffic typically uses port 80, FTP traffic uses port 21, and SMTP traffic uses port 25.
+
+You can also look at the packet details to determine the content of the packet. For example, if the packet is part of an HTTP connection,
+you can look at the HTTP header to see the HTTP request and response messages.
+
+Additionally, Wireshark can often provide additional information about the captured packets by using various analysis tools. For example, 
+you can use the "Follow TCP Stream" option to view the entire TCP stream for a particular connection.
