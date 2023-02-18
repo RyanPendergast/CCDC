@@ -1,5 +1,0 @@
-sudo apt install iptables
-iptables -F
-sudo iptables -A input -p tcp –dport 23 -j DROP
-sudo iptables -I INPUT -p icmp –icmp-type 0 -j DROP
-sudo iptables -I output -p –icmp-type 8 -j DROP
