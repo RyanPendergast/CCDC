@@ -1,0 +1,31 @@
+Open the Windows Defender Firewall with Advanced Security console. You can do this by 
+searching for "Windows Defender Firewall with Advanced Security" in the Start menu.
+
+Click on "Inbound Rules" in the left-hand menu.
+
+Click on "New Rule" in the right-hand menu to create a new inbound rule.
+
+Select "Custom" as the rule type and click "Next".
+
+Select "All programs" and click "Next".
+
+Select "Protocol type" as the type of protocol you want to filter. You can choose from TCP, 
+UDP, ICMP, or any other protocol that your server requires. Click "Next".
+
+Select "Local IP address" as the scope of the rule. This should be the IP address of the server 
+that the rule will apply to. Click "Next".
+
+Select "These IP addresses" as the remote IP address. This will limit the rule to only apply to
+packets coming from a specific IP address or range. Enter the IP address or range you want to allow 
+in the "This IP address or subnet" field. Click "Next".
+
+Select "Allow the connection" and click "Next".
+
+Select the appropriate network type for the rule. If the server is connected to a domain network,
+choose "Domain". If it's connected to a private or public network, choose the appropriate option.
+Click "Next".
+
+Give the rule a name and description that clearly indicates the purpose of the rule. Click "Finish" 
+to create the rule.
+
+Repeat steps 3-11 for each protocol and IP address range that you want to allow inbound traffic from.
