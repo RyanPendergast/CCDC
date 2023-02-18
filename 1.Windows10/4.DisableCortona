@@ -1,8 +1,0 @@
-Disable Windows Search
-
-C:\WINDOWS\system32>sc config WSearch start= disabled
-> Services
-> Windows Search
-> Press Stop
-> Startup Type: Disabled
-> Apply and OK
